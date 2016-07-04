@@ -27,3 +27,8 @@ Don't forget to add a Trigger which catches your event and sends it to Google An
 // Parameters: messageType, eventAction, eventLabel, eventCategory.
 doPost('pushEventToDatalayer', 'Click', 'Button ID', 'Widgets');
 ```
+##Changelog
+1.0 (19/04/2016): Initial release
+
+## License
+Licensed under the MIT License
