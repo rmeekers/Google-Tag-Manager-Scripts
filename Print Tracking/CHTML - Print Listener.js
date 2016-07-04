@@ -1,6 +1,7 @@
 <script>
 /** GTM Print Listener
  * Listens for page print events and send them as an event to the dataLayer
+ * @version 1.0
  * @license MIT License
  * @author Rutger Meekers [rutger@meekers.eu]
  */

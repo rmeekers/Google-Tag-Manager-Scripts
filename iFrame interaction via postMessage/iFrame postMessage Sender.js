@@ -2,6 +2,7 @@
  /**
  * GTM iFrame interaction via postMessage.
  * This postMessage sender should be added inside the iFrame window.
+ * @version 1.0
  * @license MIT License
  * @author Rutger Meekers [rutger@meekers.eu]
  */
