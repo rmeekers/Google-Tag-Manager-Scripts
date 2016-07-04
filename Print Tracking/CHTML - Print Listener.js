@@ -16,7 +16,7 @@
             dataLayer.push({
                 'event': 'trackEvent',
                 'eventAction' : 'Initiate Print Dialog',
-                'eventCategory' : 'Other Interactions'                
+                'eventCategory' : 'Other Interactions'
             });
         }
     };
