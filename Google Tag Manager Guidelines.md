@@ -115,6 +115,7 @@ No website changes were related to this change / bugfix.
 Use folders to group your tags, triggers and variables by the goal they’re achieving. Some examples:
 
 | **Type** | **Description** |
+| -------- | --------------- |
 | Facebook | Facebook related items |
 | Cross Domain Tracking | Utilities related to Cross Domain Tracking |
 | Utilities | Helper functions and scripts that are used for different purposes |
@@ -130,6 +131,7 @@ Use this naming convention for tags: `tag_type_abbreviation - name`
 * `name` is a descriptive name for this tag. Keep it short but in combination with `type` it should be immediately understandable what it refers to. If there is no need to add a name, you can leave this away. E.g. if you have only one Google Optimize tag, you can just name it like this: `Google Optimize`
 
 | **Tag type** | **tag_type_abbreviation** |
+| ------------ | ------------------------- |
 | CL | Conversion Linker |
 | UA - E | Universal Analytics - Event |
 | UA - PV | Universal Analytics - Page View |
@@ -143,6 +145,7 @@ Use this naming convention for triggers: `type name`
 * `name` is a descriptive name for this trigger. Keep it short but in combination with `type` it should be immediately understandable what it refers to.
 
 | **Type** | **Description** |
+| -------- | --------------- |
 | Click | A click on a page |
 | PV | A page view |
 | Event | Any custom GTM event that does not match one of the types listed above |
@@ -157,6 +160,7 @@ Use this naming convention for variables: `variable_type_abbreviation.[tool.]nam
 * `name` is a descriptive name for this variable. Keep it short but in combination with `type` and `tool` it should be immediately understandable what it refers to.
 
 | **Variable type** | **variable_type_abbreviation** |
+| ----------------- | ------------------------------ |
 | Auto-Event Variable | aev |
 | Constant | c |
 | Custom JavaScript | cjs |
