@@ -35,6 +35,8 @@ While marketed and understood by marketers as a simple WYSIWYG tracking editor t
 		* [Do not use tool-specific data layer naming and structure](#do-not-use-tool-specific-data-layer-naming-and-structure)
 		* [Do not push Personally Identifiable Information (PII) to the data layer](#do-not-push-personally-identifiable-information-pii-to-the-data-layer)
 		* [Avoid adding data to the data layer from Google Tag Manager itself](#avoid-adding-data-to-the-data-layer-from-google-tag-manager-itself)
+* [Testing](#testing)
+  * [Avoid a page reload when testing](#avoid-a-page-reload-when-testing)
 
 - - - -
 
@@ -324,3 +326,18 @@ It’s okay to submit a proprietary user ID if only you can trace it back to an 
 In most cases it’s not a good idea to push data to the data layer in Custom HTML/JS code inside Google Tag Manager as it can be confusing when events come from both outside and inside Google Tag Manager.
 
 If required, use the built-in [Tag Sequencing](https://support.google.com/tagmanager/answer/6238868?hl=en) capabilities when you have to deal with race conditions (situation where you require things to be processed in a certain order but you can’t guarantee that order) or certain dependencies.
+
+## Testing
+
+Below you'll find some tips you can use when testing your setup.
+
+## Avoid a page reload when testing
+
+Sometimes you need to debug on a page which redirects to another page before you have the ability to see the test results in your Google Tag Manager debug console. Add this JavaScript to your console on the page you want to prevent the page reload, and you will get a dialog before the page reloads which allows you to cancel the reload.
+
+```js
+window.addEventListener('beforeunload', function(e) {
+  e.preventDefault();
+  e.returnValue = '';
+});
+```
