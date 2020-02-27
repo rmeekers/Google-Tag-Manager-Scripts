@@ -1,6 +1,6 @@
 # Google Tag Manager guidelines
 
-These guidelines are a must read for [Google Tag Manager (GTM)](https://www.google.com/analytics/tag-manager/) users and they should fully understood before actually using the tool.
+These guidelines are a must read for [Google Tag Manager (GTM)](https://www.google.com/analytics/tag-manager) users and they should fully understood before actually using the tool.
 While marketed and understood by marketers as a simple WYSIWYG tracking editor tool anyone can use, GTM is a very powerful and flexible tool which gives its users unrestricted access to the entire website, its data and functionality. With great power comes great responsibility and these guidelines help you navigate the jungle called Google Tag Manager.
 
 **Table of Contents**
@@ -89,9 +89,9 @@ The `Default workspace` should be kept empty for emergencies. If there ever is a
 Name every version. The changes of the version should be intuitively clear from just the name. Focus on the _business impact_ of the change rather than the technical details. If a ticket or task system is used to initiate the change, include a reference to the ticket or task in the version name.
 
 Write a version description/notes for every version. The description should answer:
-			* Who requested the change?
-			* What was the tracking behaviour before this change, what’s it like now?
-			* Were there website changes that this GTM implementation depends on? If so, what are they?
+* Who requested the change?
+* What was the tracking behaviour before this change, what’s it like now?
+* Were there website changes that this GTM implementation depends on? If so, what are they?
 
 Example of a version description/notes:
 
@@ -103,7 +103,8 @@ John Doe (Company Inc.)
 Phone number tracking doesn’t work on Safari.
 
 ## Changes in this version
-Phone number tracking is fixed. A function was being used that was not supported by Safari.
+Phone number tracking is fixed.
+A function was being used that was not supported by Safari.
 
 ## Related website changes
 No website changes were related to this change / bugfix.
@@ -113,11 +114,10 @@ No website changes were related to this change / bugfix.
 
 Use folders to group your tags, triggers and variables by the goal they’re achieving. Some examples:
 
-::**Type** 					**Description**                                                                 		|::
-Facebook					Facebook related items
-Cross Domain Tracking		Utilities related to Cross Domain Tracking
-Utilities     					Helper functions and scripts that are used for different
-							purposes
+| **Type** | **Description** |
+| Facebook | Facebook related items |
+| Cross Domain Tracking | Utilities related to Cross Domain Tracking |
+| Utilities | Helper functions and scripts that are used for different purposes |
 
 
 ## Naming convention
@@ -129,12 +129,11 @@ Use this naming convention for tags: `tag_type_abbreviation - name`
 * `tag_type_abbreviation` refers to the different kind of Google Tag Manager tags. For the ones listed below you can use an abbreviation. For other you can just copy the whole type of the tag. E.g. `Google Optimize`
 * `name` is a descriptive name for this tag. Keep it short but in combination with `type` it should be immediately understandable what it refers to. If there is no need to add a name, you can leave this away. E.g. if you have only one Google Optimize tag, you can just name it like this: `Google Optimize`
 
-::**Tag type**				**tag_type_abbreviation**								|::
-CHTML						Custom HTML
-CL							Conversion Linker
-UA - E						Universal Analytics - Event
-UA - PV						Universal Analytics - Page View
-UA - S						Universal Analytics - Social
+| **Tag type** | **tag_type_abbreviation** |
+| CL | Conversion Linker |
+| UA - E | Universal Analytics - Event |
+| UA - PV | Universal Analytics - Page View |
+| UA - S | Universal Analytics - Social |
 
 ### Triggers
 
@@ -143,13 +142,11 @@ Use this naming convention for triggers: `type name`
 * `type` refers to the different kind of Google Tag Manager triggers.  The most important ones are listed in the below table.
 * `name` is a descriptive name for this trigger. Keep it short but in combination with `type` it should be immediately understandable what it refers to.
 
-::**Type** 			**Description**												|::
-Click				A click on a page
-PV					A page view
-Event				Any custom GTM event that does not match one of the types listed
-					above
-State				A certain state of your website and is usually used as an
-					exception rather than a trigger
+| **Type** | **Description** |
+| Click | A click on a page |
+| PV | A page view |
+| Event | Any custom GTM event that does not match one of the types listed above |
+| State | A certain state of your website and is usually used as an exception rather than a trigger |
 
 ### Variables
 
@@ -159,15 +156,15 @@ Use this naming convention for variables: `variable_type_abbreviation.[tool.]nam
 * `tool` is an optional part for variables which are (and will be) only relevant to one tool. A `tool` in this case can be either a product like `adform`, `hotjar`, `kissmetrics` or a universal concept like Google Analytics Enhanced Ecommerce which has the common abbreviation `eec`.
 * `name` is a descriptive name for this variable. Keep it short but in combination with `type` and `tool` it should be immediately understandable what it refers to.
 
-::**Variable type**				**variable_type_abbreviation**					|::
-Auto-Event Variable				aev
-Constant						c
-Custom JavaScript				cjs
-Data Layer Variable				dlv
-DOM Element					dom
-Google Analytics settings			gas
-JavaScript Variable				jsvar
-Lookup Table					lookup
+| **Variable type** | **variable_type_abbreviation** |
+| Auto-Event Variable | aev |
+| Constant | c |
+| Custom JavaScript | cjs |
+| Data Layer Variable | dlv |
+| DOM Element | dom |
+| Google Analytics settings | gas |
+| JavaScript Variable | jsvar |
+| Lookup Table | lookup |
 
 #### Some examples
 
@@ -240,8 +237,8 @@ You can use [Can I use](https://caniuse.com/) or [MDN Web Docs](https://develope
 
 Custom JavaScript is more prone to errors than the solutions that Google Tag Manager supports out of the box. Use built-in tag templates instead of JavaScript where you can.
 
-	1. Verify if there’s a GTM-native tag template
-	2. Use Lookup Tables instead of `if … else …` constructs
+1. Verify if there’s a GTM-native tag template
+2. Use Lookup Tables instead of `if … else …` constructs
 
 #### Document your functions
 
