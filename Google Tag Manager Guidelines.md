@@ -114,11 +114,11 @@ No website changes were related to this change / bugfix.
 
 Use folders to group your tags, triggers and variables by the goal they’re achieving. Some examples:
 
-| **Type** | **Description** |
-| -------- | --------------- |
-| Facebook | Facebook related items |
-| Cross Domain Tracking | Utilities related to Cross Domain Tracking |
-| Utilities | Helper functions and scripts that are used for different purposes |
+| Type		 							| Description			 																									|
+| :--			 							| :--							 																									|
+| Facebook 							| Facebook related items 																						|
+| Cross Domain Tracking | Utilities related to Cross Domain Tracking 												|
+| Utilities 						| Helper functions and scripts that are used for different purposes |
 
 
 ## Naming convention
@@ -130,12 +130,12 @@ Use this naming convention for tags: `tag_type_abbreviation - name`
 * `tag_type_abbreviation` refers to the different kind of Google Tag Manager tags. For the ones listed below you can use an abbreviation. For other you can just copy the whole type of the tag. E.g. `Google Optimize`
 * `name` is a descriptive name for this tag. Keep it short but in combination with `type` it should be immediately understandable what it refers to. If there is no need to add a name, you can leave this away. E.g. if you have only one Google Optimize tag, you can just name it like this: `Google Optimize`
 
-| **Tag type** | **tag_type_abbreviation** |
-| ------------ | ------------------------- |
-| CL | Conversion Linker |
-| UA - E | Universal Analytics - Event |
-| UA - PV | Universal Analytics - Page View |
-| UA - S | Universal Analytics - Social |
+| Tag type 			| tag_type_abbreviation 					|
+| :-- 					| :-- 														|
+| CL 						| Conversion Linker 							|
+| UA - E 				| Universal Analytics - Event 		|
+| UA - PV 			| Universal Analytics - Page View |
+| UA - S 				| Universal Analytics - Social 		|
 
 ### Triggers
 
@@ -144,12 +144,12 @@ Use this naming convention for triggers: `type name`
 * `type` refers to the different kind of Google Tag Manager triggers.  The most important ones are listed in the below table.
 * `name` is a descriptive name for this trigger. Keep it short but in combination with `type` it should be immediately understandable what it refers to.
 
-| **Type** | **Description** |
-| -------- | --------------- |
-| Click | A click on a page |
-| PV | A page view |
-| Event | Any custom GTM event that does not match one of the types listed above |
-| State | A certain state of your website and is usually used as an exception rather than a trigger |
+| Type		 	| Description			 																																					|
+| :-- 			| :-- 																																											|
+| Click 		| A click on a page 																																				|
+| PV 				| A page view 																																							|
+| Event 		| Any custom GTM event that does not match one of the types listed above 										|
+| State 		| A certain state of your website and is usually used as an exception rather than a trigger |
 
 ### Variables
 
@@ -159,16 +159,16 @@ Use this naming convention for variables: `variable_type_abbreviation.[tool.]nam
 * `tool` is an optional part for variables which are (and will be) only relevant to one tool. A `tool` in this case can be either a product like `adform`, `hotjar`, `kissmetrics` or a universal concept like Google Analytics Enhanced Ecommerce which has the common abbreviation `eec`.
 * `name` is a descriptive name for this variable. Keep it short but in combination with `type` and `tool` it should be immediately understandable what it refers to.
 
-| **Variable type** | **variable_type_abbreviation** |
-| ----------------- | ------------------------------ |
-| Auto-Event Variable | aev |
-| Constant | c |
-| Custom JavaScript | cjs |
-| Data Layer Variable | dlv |
-| DOM Element | dom |
-| Google Analytics settings | gas |
-| JavaScript Variable | jsvar |
-| Lookup Table | lookup |
+| Variable type							| variable_type_abbreviation	|
+| :-- 											| :-- 												|
+| Auto-Event Variable 			| aev 												|
+| Constant 									| c 													|
+| Custom JavaScript 				| cjs 												|
+| Data Layer Variable 			| dlv 												|
+| DOM Element 							| dom 												|
+| Google Analytics settings | gas													|
+| JavaScript Variable 			| jsvar 											|
+| Lookup Table 							| lookup 											|
 
 #### Some examples
 
