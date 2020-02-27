@@ -35,6 +35,7 @@ While marketed and understood by marketers as a simple WYSIWYG tracking editor t
 		* [Do not use tool-specific data layer naming and structure](#do-not-use-tool-specific-data-layer-naming-and-structure)
 		* [Do not push Personally Identifiable Information (PII) to the data layer](#do-not-push-personally-identifiable-information-pii-to-the-data-layer)
 		* [Avoid adding data to the data layer from Google Tag Manager itself](#avoid-adding-data-to-the-data-layer-from-google-tag-manager-itself)
+	* [Triggers](#triggers)
 * [Testing](#testing)
   * [Avoid a page reload when testing](#avoid-a-page-reload-when-testing)
 
@@ -71,7 +72,7 @@ In case this is not possible for a reason, make sure that you only provide acces
 
 ### Two-step login verification
 
-2-step login verification should be required on every Google Tag Manager account. Enabling this forces users to enable two-step authentication on their Google account before they can publish a container version.
+2-step login verification should be required on every Google Tag Manager account. Enabling this forces users to enable two-step authentication on their Google account before they can publish a container version, edit custom HTML or JavaScript tags and variables.
 
 
 ## Workflow
