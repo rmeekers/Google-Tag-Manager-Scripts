@@ -11,7 +11,7 @@ While marketed and understood by marketers as a simple WYSIWYG tracking editor t
 	* [Two-step login verification](#two-step-login-verification)
 * [Workflow](#workflow)
 	* [Workspaces](#workspaces)
-	* [Version names and description/notes](#version-names-and-description/notes)
+	* [Version names and description/notes](#version-names-and-descriptionnotes)
 	* [Folders](#folders)
 * [Naming convention](#naming-convention)
 	* [Tags](#tags)
