@@ -30,10 +30,10 @@ While marketed and understood by marketers as a simple WYSIWYG tracking editor t
 	* [Security](#security)
 		* [Use Subresource Integrity](#use-subresource-integrity)
 		* [Google Tag Manager guidelines - Ask for help](#ask-for-help)
-	* [data layer](#datalayer)
-		* [Which data layer? CEDDL or Google?](#which-data-layer%3F-ceddl-or-google%3F)
+	* [data layer](#data-layer)
+		* [Which data layer? CEDDL or Google?](#which-data-layer-ceddl-or-google)
 		* [Do not use tool-specific data layer naming and structure](#do-not-use-tool-specific-data-layer-naming-and-structure)
-		* [Do not push Personally Identifiable Information (PII) to the data layer](#do-not-push-personally-identifiable-information-%28PII%29-to-the-data-layer)
+		* [Do not push Personally Identifiable Information (PII) to the data layer](#do-not-push-personally-identifiable-information-pii-to-the-data-layer)
 		* [Avoid adding data to the data layer from Google Tag Manager itself](#avoid-adding-data-to-the-data-layer-from-google-tag-manager-itself)
 
 - - - -
