@@ -266,24 +266,24 @@ function Book(title, author) {
 Make sure to remove `console.log` once you publish your workspace to production. It needlessly clutters the  browser console.
 You can use it off-course for debugging purposes during development and testing.
 
-## Security
+### Security
 
-### Use Subresource Integrity
+#### Use Subresource Integrity
 
 Avoid the use of 3rd party scripts. But in case you have to include them, make sure to use use [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) to make sure the integrated resource does not change without you noticing.
 Useful tool to generate hashes: [SRI Hash Generator](https://www.srihash.org/)
 
-### Ask for help
+#### Ask for help
 
 ⁉️ If you’re not _entirely_ confident with what you’re doing, consult somebody else to assist you.
 
-### Use a development property for testing purposes
+#### Use a development property for testing purposes
 
 Make sure to use development properties in Google Analytics whenever you are testing your code. This avoids polluting production data.
 
-## data layer
+### data layer
 
-### Which data layer? CEDDL or Google?
+#### Which data layer? CEDDL or Google?
 
 Depending on the purpose, we store our data in the [CEDDL data layer](https://www.w3.org/2013/12/ceddl-201312) `digitalData` or the [Google data layer](https://developers.google.com/tag-manager/devguide) `dataLayer`.
 
@@ -297,7 +297,7 @@ Although we cannot give an exact indication of which data needs to be stored in 
 
 The reason for this is that the CEDDL data layer has clear guidelines and predefined structure on how to store the data. The Google data layer on the other hand, is very useful to handle events which do not persist over multiple pages.
 
-### Do not use tool-specific data layer naming and structure
+#### Do not use tool-specific data layer naming and structure
 
 Make sure the names of data layer variables are always as descriptive as possible.
 Do not use tool specific keys, even if it may seem convenient. Separating tool logic from the website is one of the most important goals of using Google Tag Manager.
@@ -315,18 +315,29 @@ Console:
 
 Use Custom JavaScript variables to preprocess data for individual tools if necessary.
 
-### Do not push Personally Identifiable Information (PII) to the data layer
+#### Do not push Personally Identifiable Information (PII) to the data layer
 
 Information that can be used by third parties to identify a person or a device should not be used in dataLayer.
 That includes names, phone numbers, email addresses and IP addresses.
 
 It’s okay to submit a proprietary user ID if only you can trace it back to an individual. But as this might be a grey zone, it might be good to consult a loyer or privacy expert.
 
-### Avoid adding data to the data layer from Google Tag Manager itself
+#### Avoid adding data to the data layer from Google Tag Manager itself
 
 In most cases it’s not a good idea to push data to the data layer in Custom HTML/JS code inside Google Tag Manager as it can be confusing when events come from both outside and inside Google Tag Manager.
 
 If required, use the built-in [Tag Sequencing](https://support.google.com/tagmanager/answer/6238868?hl=en) capabilities when you have to deal with race conditions (situation where you require things to be processed in a certain order but you can’t guarantee that order) or certain dependencies.
+
+### Triggers
+
+In order to make sure that your tags fire at the right moment and to optimize page load time, it's very important that you have a good understanding of how triggers work.
+
+1. Fire a tag only on pages where they need to fire. For example: if you're measuring a contact form which is on the contact page, only fire the measurment tag on the contact page instead of on all pages
+2. Determine on which moment your tag should fire. In case you're firing tags on a certain page, make sure you understand the following three concepts:
+	1. **Page View**: Fires immediately when the web browser begins to load a page. Use this option if you only need data generated from page impressions.
+	2. **DOM Ready**: Fires after the browser has finished constructing the full page in HTML and the Document Object Model (DOM) is ready to be parsed. Pageview-based tags that interact with the DOM to populate variables should use this trigger type to ensure that the correct values are available to Tag Manager.
+	3. **Window Loaded**: Fires after the page has fully loaded, including any embedded resources such as images and scripts.
+
 
 ## Testing
 
